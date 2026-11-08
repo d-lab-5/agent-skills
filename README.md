@@ -25,9 +25,9 @@ Only skills that belong to no single repository live here, in
 
 | Kind | Home | Examples |
 |---|---|---|
-| **House:** how D-LAB-5 works anywhere | `plugins/dlab5-house/` here | `dlab5-mcp-server`, `dlab5-cognito-api-keys` |
+| **House:** how D-LAB-5 works anywhere | `plugins/dlab5-house/` here | `dlab5-mcp-server`, `dlab5-cognito-api-keys`, `dlab5-security-audit` |
 | **Blueprint:** one per template | that template's `plugin/` | cloud template, edge template, shared docs, the cloud-edge blueprint |
-| **Domain** | the domain's own catalogue repository | ERP-LAB-5's `erplab5-house`, `sap-cc-operations` |
+| **Domain** | the domain's own catalogue repository | DigitalHome.Cloud's `dhc`; ERP-LAB-5's `erplab5-house`, `sap-cc-operations` |
 | **Product or tool:** ships with it | the product's `plugin/` | `pytool-kit`, `di-replication-sync`, `metro-map` |
 | **Third party:** pinned, never forked | the consumer's `skills-lock.json` | SAP skills, archify |
 
