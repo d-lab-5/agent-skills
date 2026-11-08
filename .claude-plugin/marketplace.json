@@ -24,6 +24,100 @@
       ]
     },
     {
+      "name": "dlab5-cloud-edge-blueprint",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/d-lab-5/blueprinting-dlab5-net.git",
+        "path": "plugin"
+      },
+      "description": "Design a new D-LAB-5 product as a cloud, edges, or both, from the ArchiMate blueprint.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "blueprint",
+        "archimate",
+        "architecture"
+      ]
+    },
+    {
+      "name": "dlab5-cloud-template",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/d-lab-5/template-dlab5-cloud.git",
+        "path": "plugin"
+      },
+      "description": "Work in the cloud template and every product made from it: Amplify Gen 2, Gatsby, tenants with spaces, the edge API.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "template",
+        "amplify",
+        "gatsby"
+      ]
+    },
+    {
+      "name": "dlab5-edge-template",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/d-lab-5/template-dlab5-edge.git",
+        "path": "plugin"
+      },
+      "description": "Make and work in a D-LAB-5 edge (human, IoT or robot) linked to a cloud by the device flow.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "template",
+        "edge",
+        "python"
+      ]
+    },
+    {
+      "name": "dlab5-shared-docs",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/d-lab-5/template-dlab5-shared.git",
+        "path": "plugin"
+      },
+      "description": "A product's public docs repository (<product>-shared) and docs.dlab5.net.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "template",
+        "docs",
+        "adr"
+      ]
+    },
+    {
+      "name": "dlab5-workstation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/d-lab-5/pc-configurations.git",
+        "path": "plugin"
+      },
+      "description": "Keep a DLAB5 workstation as its config declares: health and security check, NVIDIA Kepler recovery, printers, OpenCCU.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "workstation",
+        "ubuntu"
+      ]
+    },
+    {
       "name": "erplab5-house",
       "source": {
         "source": "git-subdir",
