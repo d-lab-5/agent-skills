@@ -1,0 +1,123 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "d-lab-5",
+  "owner": {
+    "name": "D-LAB-5",
+    "url": "https://github.com/d-lab-5"
+  },
+  "description": "Agent skills for all five D-LAB-5 development domains: the core, DigitalHome.Cloud, ERP-LAB-5, Atelier-5 and artdecoris labs. An entry is a pointer: each skill has one home, the repository that owns its subject, and is listed here, never copied.",
+  "plugins": [
+    {
+      "name": "dlab5-house",
+      "source": "./plugins/dlab5-house",
+      "description": "How D-LAB-5 builds on Amplify Gen 2 anywhere: an MCP server over the backend, and API keys as Cognito credentials.",
+      "version": "0.1.0",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "d-lab-5",
+        "amplify",
+        "mcp",
+        "cognito"
+      ]
+    },
+    {
+      "name": "erplab5-house",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/darkfactory.git",
+        "path": "plugins/erplab5-house"
+      },
+      "description": "ERP-LAB-5 house rules: commit conventions, CLI design for the operator tools, and the security audit across BTP, the Cloud Connector and NetWeaver.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "productivity",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    },
+    {
+      "name": "sap-cc-operations",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/darkfactory.git",
+        "path": "plugins/sap-cc-operations"
+      },
+      "description": "Operating the SAP Cloud Connector: admin REST API, the first-run 403s, traces, and NoChannelsAvailableException.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "productivity",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    },
+    {
+      "name": "sap-di-rms-api",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/darkfactory.git",
+        "path": "plugins/sap-di-rms-api"
+      },
+      "description": "The SAP Data Intelligence RMS internal API, which the public DI API does not cover.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "productivity",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    },
+    {
+      "name": "pytool-kit",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/python-tool-template.git",
+        "path": "plugin"
+      },
+      "description": "Build D-LAB-5 small full-stack Python tools, and edges: scaffold from the template, extend through every layer, take core fixes, release.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    },
+    {
+      "name": "di-replication-sync",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/sap-di-tools.git",
+        "path": "plugin"
+      },
+      "description": "Compare and promote SAP Data Intelligence replication flows between landscapes. Unofficial; not affiliated with SAP.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "productivity",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    },
+    {
+      "name": "metro-map",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ERP-LAB-5/metro-map-tool.git",
+        "path": "plugin"
+      },
+      "description": "Draw transit-map diagrams of landscapes, pipelines and roadmaps, rendered to a standalone SVG.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "productivity",
+      "keywords": [
+        "erp-lab-5"
+      ]
+    }
+  ]
+}

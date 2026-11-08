@@ -1,0 +1,10 @@
+{
+  "name": "dlab5-house",
+  "version": "0.1.0",
+  "description": "How D-LAB-5 builds on Amplify Gen 2 anywhere, in every domain: an MCP server over the backend, and named, scoped API keys as Cognito credentials.",
+  "author": { "name": "D-LAB-5" },
+  "homepage": "https://github.com/d-lab-5/agent-skills",
+  "repository": "https://github.com/d-lab-5/agent-skills",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["d-lab-5", "amplify", "mcp", "cognito", "api-keys"]
+}

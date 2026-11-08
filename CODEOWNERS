@@ -1,0 +1,8 @@
+# Who reviews what. One owner per plugin home; pointers in the catalogue are
+# reviewed by the catalogue owner, and the skill itself by its own repository's
+# CODEOWNERS. When a domain gets collaborators, add them on their plugin's
+# path and raise the ruleset on main to one approval with code-owner review.
+*                          @d-lab-5
+/plugins/dlab5-house/      @d-lab-5
+/.claude-plugin/           @d-lab-5
+/scripts/                  @d-lab-5
