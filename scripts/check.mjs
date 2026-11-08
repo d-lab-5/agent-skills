@@ -33,7 +33,7 @@ const fail = failHere;
 
 const RULES = [
   [/\b\d{12}\b/, "a 12-digit number (an AWS account id?)"],
-  [/arn:aws[a-z-]*:/, "an ARN"],
+  [/arn:aws[a-z-]*:[a-z0-9-]*:[a-z0-9-]*:\d{12}:/, "an ARN with an account id"],
   [/AKIA[0-9A-Z]{16}|(sk|pk|rk)_(live|test)_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{36,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/, "a key or token"],
   [/\b[a-z0-9]{13,14}\.amplifyapp\.com|\bd[a-z0-9]{12,13}\.cloudfront\.net|\.execute-api\.|\.lambda-url\./, "an app, distribution or function hostname"],
   [/[A-Za-z0-9._%+-]+@(?!anthropic\.com\b|users\.noreply\.github\.com\b|example\.(com|org)\b)[A-Za-z0-9-]+\.[a-z]{2,}\b/, "an email address"],

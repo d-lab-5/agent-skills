@@ -24,13 +24,19 @@ expect_fail() { # name, expected text, check args…
 skill="$tmp/r/plugins/dlab5-house/skills/dlab5-mcp-server"
 
 fresh
-node "$tmp/r/scripts/check.mjs" >/dev/null && { echo "✓ the real catalogue passes"; pass=$((pass + 1)); }
+node "$tmp/r/scripts/check.mjs" >/dev/null || { echo "✗ the real catalogue fails"; exit 1; }; echo "✓ the real catalogue passes"; pass=$((pass + 1))
 
 fresh; ln -s SKILL.md "$skill/linked.md"
 expect_fail "a symlink" "is a symlink"
 
 fresh; echo "Account 123456789012 hosts it." >> "$skill/SKILL.md"
 expect_fail "an account id" "12-digit"
+
+fresh; echo 'Role arn:aws:iam::210987654321:role/x.' >> "$skill/SKILL.md"
+expect_fail "an ARN with an account id" "an ARN"
+
+fresh; echo 'Template arn:aws:cognito-idp:${region}:${account}:userpool/* is fine.' >> "$skill/SKILL.md"
+node "$tmp/r/scripts/check.mjs" >/dev/null || { echo "✗ an ARN template fails"; exit 1; }; echo "✓ an ARN template passes"; pass=$((pass + 1))
 
 fresh; echo "Ask admin@example.net." >> "$skill/SKILL.md"
 expect_fail "an email address" "an email address"
@@ -53,9 +59,17 @@ fresh; echo "One more line." >> "$skill/SKILL.md"; commit "edit without a bump"
 expect_fail "a change without a version bump" "bump it" --since HEAD~1
 
 fresh; echo "One more line." >> "$skill/SKILL.md"
-sed -i 's/"version": "0.1.0"/"version": "0.1.1"/' "$tmp/r/plugins/dlab5-house/.claude-plugin/plugin.json" "$tmp/r/.claude-plugin/marketplace.json"
+python3 - "$tmp/r" <<'BUMP'
+import json, sys
+r = sys.argv[1]
+for p in (f"{r}/plugins/dlab5-house/.claude-plugin/plugin.json", f"{r}/.claude-plugin/marketplace.json"):
+    j = json.load(open(p))
+    for e in ([j] if "plugins" not in j else [e for e in j["plugins"] if e["name"] == "dlab5-house"]):
+        a, b, c = map(int, e["version"].split(".")); e["version"] = f"{a}.{b}.{c + 1}"
+    json.dump(j, open(p, "w"))
+BUMP
 commit "edit with a bump"
-node "$tmp/r/scripts/check.mjs" --since HEAD~1 >/dev/null && { echo "✓ a change with a bump passes"; pass=$((pass + 1)); }
+node "$tmp/r/scripts/check.mjs" --since HEAD~1 >/dev/null || { echo "✗ a change with a bump fails"; exit 1; }; echo "✓ a change with a bump passes"; pass=$((pass + 1))
 
 fresh; python3 - "$tmp/r/.claude-plugin/marketplace.json" <<'P'
 import json,sys; p=sys.argv[1]; m=json.load(open(p))

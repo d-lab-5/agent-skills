@@ -10,14 +10,15 @@
     {
       "name": "dlab5-house",
       "source": "./plugins/dlab5-house",
-      "description": "How D-LAB-5 builds on Amplify Gen 2 anywhere: an MCP server over the backend, and API keys as Cognito credentials.",
-      "version": "0.1.0",
+      "description": "How D-LAB-5 works in every domain: the security and quality audit, an MCP server over Amplify Gen 2, and API keys as Cognito credentials.",
+      "version": "0.2.0",
       "author": {
         "name": "D-LAB-5"
       },
       "category": "development",
       "keywords": [
         "d-lab-5",
+        "security-audit",
         "amplify",
         "mcp",
         "cognito"
@@ -118,13 +119,27 @@
       ]
     },
     {
+      "name": "dhc",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/DigitalHome-cloud/digitalhome-cloud-darkfactory.git",
+        "path": "plugin"
+      },
+      "description": "DigitalHome.Cloud: the Amplify Gen 2 platform, design-to-implementation, electrical installation design, device autodiscovery, and the Blockly and ontology tooling for spatial modelling.",
+      "author": {
+        "name": "D-LAB-5"
+      },
+      "category": "development",
+      "keywords": ["digitalhome", "amplify", "blockly", "ontology", "smart-home"]
+    },
+    {
       "name": "erplab5-house",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/ERP-LAB-5/darkfactory.git",
         "path": "plugins/erplab5-house"
       },
-      "description": "ERP-LAB-5 house rules: commit conventions, CLI design for the operator tools, and the security audit across BTP, the Cloud Connector and NetWeaver.",
+      "description": "ERP-LAB-5 house rules: commit conventions, and CLI design for the operator tools. The SAP security audit is dlab5-house's dlab5-security-audit.",
       "author": {
         "name": "D-LAB-5"
       },
