@@ -37,7 +37,7 @@ const RULES = [
   [/AKIA[0-9A-Z]{16}|(sk|pk|rk)_(live|test)_[A-Za-z0-9]{16,}|gh[pousr]_[A-Za-z0-9]{36,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/, "a key or token"],
   [/\b[a-z0-9]{13,14}\.amplifyapp\.com|\bd[a-z0-9]{12,13}\.cloudfront\.net|\.execute-api\.|\.lambda-url\./, "an app, distribution or function hostname"],
   [/[A-Za-z0-9._%+-]+@(?!anthropic\.com\b|users\.noreply\.github\.com\b|example\.(com|org)\b)[A-Za-z0-9-]+\.[a-z]{2,}\b/, "an email address"],
-  [/\/home\/[a-z]|C:\\Users\\/, "a local path"],
+  [/(?:^|[\s`"'(=:~])\/home\/[a-z]|C:\\Users\\/, "a local path"],
   [/\bdh-[a-z0-9]{8,}\b/, "a DI tenant id"],
 ];
 if (process.env.DLAB5_DENYLIST && existsSync(process.env.DLAB5_DENYLIST)) {
