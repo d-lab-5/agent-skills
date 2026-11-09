@@ -1,7 +1,7 @@
 {
   "name": "dlab5-house",
-  "version": "0.2.0",
-  "description": "How D-LAB-5 works in every domain: the security and quality audit (core plus Amplify, edge and SAP modules), an MCP server over an Amplify Gen 2 backend, and API keys as Cognito credentials.",
+  "version": "0.3.0",
+  "description": "How D-LAB-5 works in every domain: the security and quality audit (core plus Amplify, edge and SAP modules), repository conformance to its template type, an MCP server over an Amplify Gen 2 backend, and API keys as Cognito credentials.",
   "author": {
     "name": "D-LAB-5"
   },

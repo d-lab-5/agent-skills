@@ -10,8 +10,8 @@
     {
       "name": "dlab5-house",
       "source": "./plugins/dlab5-house",
-      "description": "How D-LAB-5 works in every domain: the security and quality audit, an MCP server over Amplify Gen 2, and API keys as Cognito credentials.",
-      "version": "0.2.0",
+      "description": "How D-LAB-5 works in every domain: the security and quality audit, repository conformance, an MCP server over Amplify Gen 2, and API keys as Cognito credentials.",
+      "version": "0.3.0",
       "author": {
         "name": "D-LAB-5"
       },
